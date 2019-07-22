@@ -43,6 +43,7 @@ body {
   margin: 0 auto;
   width: 92vw;
 }
+
 @media screen and (min-width: 980px) {
   body {
     display: grid;
@@ -82,7 +83,7 @@ body {
 .sidebar {
   grid-area: sidebar;
   align-self: start;
-  border-left: 1px solid black;
+  border-left: none;
 }
 @media screen and (min-width: 980px) {
   .sidebar {
@@ -96,6 +97,7 @@ body {
     margin-top: 136px;
     padding-top: 90px;
     width: 15%;
+    border-left: 1px solid black;
   }
 }
 

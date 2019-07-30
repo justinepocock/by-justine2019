@@ -98,9 +98,8 @@ body {
   .sidebar {
     position: fixed;
     margin-top: 136px;
-    padding: 90px;
-    width: 15%;
-    border-left: 1px solid black;
+   /* padding: 90px; */
+    width: 20%;
   }
 }
 

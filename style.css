@@ -42,7 +42,8 @@
 body {
   margin: 0 auto;
   width: 92vw;
-}
+  background-image: url(/assets/background.svg);
+  background-size: 250px;  }
 
 @media screen and (min-width: 980px) {
   body {
@@ -50,7 +51,7 @@ body {
     grid-template-areas:  "header header"
                           "sidebar main"
                           "sidefooter footer";
-    grid-template-columns: 1fr 65%;
+    grid-template-columns: 1fr 55%;
     grid-template-rows: 30px 1fr;
     align-items: baseline;
     grid-column-gap: 80px;
@@ -71,12 +72,14 @@ body {
 
 .header {
   grid-area: header;
-  border-bottom: 1px solid black;
 }
 
 .main-content {
   grid-area: main;
+  background-color: white;
+  padding: 16px
 }
+
 .main-content > *:first-child {
   padding-top: 67px;
 }
@@ -84,18 +87,18 @@ body {
   grid-area: sidebar;
   align-self: start;
   border-left: none;
+  background-color: white;
 }
 @media screen and (min-width: 980px) {
   .sidebar {
-    margin-top: 26px;
-    padding-top: 50px;
+    padding: 26px;
   }
 }
 @media screen and (min-width: 1200px) {
   .sidebar {
     position: fixed;
     margin-top: 136px;
-    padding-top: 90px;
+    padding: 90px;
     width: 15%;
     border-left: 1px solid black;
   }
@@ -143,7 +146,7 @@ h1 {
 }
 @media screen and (min-width: 767px) {
   h1 {
-    font-size: 50px;
+    font-size: 60px;
   }
 }
 
@@ -155,6 +158,7 @@ h2 {
   /* line-height: 26px; menu headings looked good with the tight underline this made*/
   line-height: normal;
   padding: 3px;
+  margin: 16px;
   /* text-transform: uppercase; Bad A11y */
 }
 @media screen and (min-width: 767px) {
@@ -191,7 +195,7 @@ a:hover {
 }
 
 .title {
-  color: rgb(225, 0, 110);
+  color: black;
 }
 
 a.title-link {
@@ -263,6 +267,7 @@ blockquote {
   color: rgb(225, 0, 110);
   line-height: 0.85;
 }
+
 /*  Page components */
 .button {
   color: rgb(0, 132, 122);
@@ -275,6 +280,7 @@ blockquote {
   padding: 18px;
   color: white;
 }
+
 /* Details */
 .date {
   font-family: 'space_groteskbold';
@@ -318,12 +324,10 @@ iframe {
   box-shadow: 5px 5px 0px 0px hotpink;
 }
 
-.sidebar > p {
-  padding-left: 32px;
-}
 .sidebar ul {
   list-style: none;
-  padding-left: 32px;
+  padding-left: 16px;
+  padding-bottom: 16px;
 }
 
 .sidebar a {

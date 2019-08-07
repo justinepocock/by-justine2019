@@ -1,0 +1,9 @@
+{
+  "short_name": "By Justine",
+  "name": "Justine Pocock's website - it's all about her",
+ 
+  "start_url": "index.html",
+  "background_color": "#BADA55",
+  "display": "standalone",
+  "theme_color": "#BADA55"
+}

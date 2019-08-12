@@ -321,6 +321,10 @@ iframe {
   /* Do better */
 }
 
+.related--link {
+  border-bottom: 0;
+}
+
 .article {
   display: flex;
   flex-direction: column;

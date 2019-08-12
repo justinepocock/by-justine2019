@@ -51,10 +51,6 @@ body {
   background-size: auto, 250px;
 }
 
-body::after {
-  background-image: 
-}
-
 @media screen and (min-width: 980px) {
   body {
     display: grid;
@@ -97,15 +93,7 @@ body::after {
   grid-area: sidebar;
   align-self: start;
   border-left: none;
-  background-color: white;
-}
-@media screen and (min-width: 980px) {
- 
-}
-@media screen and (min-width: 1200px) {
- .sidebar {
-   /* padding: 26px;*/
-  }
+  padding: 0;
 }
 
 .footer {

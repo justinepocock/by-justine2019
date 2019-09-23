@@ -127,12 +127,14 @@ body {
   }
 }
 .teaser-row li {
-  padding-right: 32px;
+  padding-bottom: 32px;
   display: flex; /** make them all the same height **/
   flex-grow: 1;
 }
 @media screen and (min-width: 767px) {
-  .teaser-row {
+  .teaser-row li {
+    padding-bottom: 0;
+    padding-right: 32px;
     flex-basis: 0;     
   }
 }
@@ -154,7 +156,7 @@ h2 {
   font-family: 'space_groteskbold';
   font-size: 20px;
   border-bottom: 6px solid hotpink;
-  display: inline-block;
+/**  display: inline-block;**/
   /* line-height: 26px; menu headings looked good with the tight underline this made*/
   line-height: normal;
   padding: 3px 0;

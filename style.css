@@ -47,8 +47,8 @@ body {
   margin: 0 auto;
   width: 92vw;
   background: rgba(255,255,255,1);
-/**  background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0)), url(/assets/background.svg);**/
-  background-size: auto, 250px;
+  background-image: url(/assets/background.svg);
+  background-size: 750px;
 }
 
 @media screen and (min-width: 980px) {
@@ -58,7 +58,7 @@ body {
                           "sidebar main"
                           "sidefooter footer";
     grid-template-columns: 1fr 85%;
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 100vh 1fr;
     align-items: baseline;
     grid-column-gap: 80px;
     grid-row-gap: 120px;
@@ -69,15 +69,18 @@ body {
 @media screen and (min-width: 1200px) {
   body {
     grid-template-columns: 1fr 70%;
-    grid-template-rows: 175px 1fr;
     grid-column-gap: 100px;
-    grid-row-gap: 40px;
+    grid-row-gap: 0;
     width: 90vw;
   }
 }
 
 .header {
   grid-area: header;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+  display: grid;
 }
 
 .main-content {
@@ -173,16 +176,6 @@ p {
   font-size: 20px;
 }
 
-a {
-  text-decoration: none;
-  border-bottom: 3px dotted rgb(225, 0, 110);
-  display: inline-block;
-  transition: border-bottom 0.3s, color 0.5s;
-}
-a::hover {
-  border-bottom: 3px solid rgb(0, 132, 122);
-}
-
 a::focus {
   color: var(--green);
 }
@@ -204,8 +197,12 @@ a.title-link {
 .header--title {
   font-family: 'space_groteskbold';
   font-size: 30px;
-  line-height: 30px;
+  line-height: 60px;
   letter-spacing: -0.8px;
+  background-color: white;
+  margin: 0; 
+  padding: 2px;
+  display: inline-block;
 }
 @media screen and (min-width: 767px) {
   .header--title {
@@ -243,21 +240,18 @@ a.title-link {
 
 .standfirst a {
   font-family: 'space_groteskbold';
-  font-size: 40px;
+  font-size: 30px;
   line-height: 0.75em;
   color: rgb(225, 0, 110);
-  border-bottom: 7px dotted rgb(225, 0, 110);
 }
-.standfirst a:hover {
-  border-bottom: 6px solid rgb(0, 132, 122);
-}
+
 @media screen and (min-width: 767px) {
   .standfirst {
-    font-size: 80px;
-    line-height: 95px;
+    font-size: 40px;
+    line-height: 55px;
   }
   .standfirst a {
-      font-size: 80px;
+      font-size: 40px;
   }
 }
 
@@ -290,12 +284,7 @@ blockquote {
   border-bottom: 0;
   font-family: 'space_groteskbold';
 }
-.flashbox {
-  font-family: 'space_groteskbold';
-  background-color: rgba(0,132,122,1);
-  padding: 18px;
-  color: white;
-}
+
 
 /* Details */
 .date {

@@ -47,7 +47,7 @@ body {
   margin: 0 auto;
   width: 92vw;
   background: rgba(255,255,255,1);
-  background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0)), url(/assets/background.svg);
+/**  background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0)), url(/assets/background.svg);**/
   background-size: auto, 250px;
 }
 
@@ -125,7 +125,9 @@ body {
 }
 .teaser-row li {
   padding-right: 32px;
-  display: flex; /* make them all the same height */
+  display: flex; /** make them all the same height **/
+  flex-basis: 0;
+  flex-grow: 1;
 }
 
 

@@ -129,10 +129,13 @@ body {
 .teaser-row li {
   padding-right: 32px;
   display: flex; /** make them all the same height **/
-  flex-basis: 0;
   flex-grow: 1;
 }
-
+@media screen and (min-width: 767px) {
+  .teaser-row {
+    flex-basis: 0;     
+  }
+}
 
 /** Styles **/
 

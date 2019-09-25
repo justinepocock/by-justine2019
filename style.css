@@ -199,6 +199,16 @@ a.title-link {
   line-height: inherit;
 }
 
+.flashbox {
+  font-family: 'space_groteskbold';
+  background-color: black;
+  color: white;
+  display: inline-block;
+  border-top: 2px solid var(--pink);
+  border-bottom: 2px solid var(--pink); 
+  padding: 15px;
+}
+
 .header--title {
   font-family: 'space_groteskbold';
   font-size: 30px;
@@ -206,8 +216,8 @@ a.title-link {
   letter-spacing: -0.8px;
   background-color: white;
   margin: 0; 
-  padding: 2px;
   display: inline-block;
+  box-shadow: 10px 0 0 white, -10px 0 0 white;
 }
 @media screen and (min-width: 767px) {
   .header--title {

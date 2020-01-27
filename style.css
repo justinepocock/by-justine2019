@@ -23,34 +23,42 @@
     font-style: bold;
 }
 
+:root {
+  --pink: rgb(225, 0, 110);
+  --green: rgb(0, 132, 122);
+}
 
 * {
-  font-family: 'space_groteskregular';
-  /* font-family: 'et_book'; */
+  /**font-family: 'space_groteskregular';**/
+  font-family: 'et_book';
   /* font-size: 18px; */
 }
 
 .pink {
-  color: rgb(225, 0, 110);
+  color: var(--pink);
 }
 
 .green {
-  color: rgb(0, 132, 122);
+  color: var(--green);
 }
 
 /** Layout **/
 body {
   margin: 0 auto;
   width: 92vw;
+  background: rgba(255,255,255,1);
+  background-image: url(/assets/background.svg);
+  background-size: 750px;
 }
+
 @media screen and (min-width: 980px) {
   body {
     display: grid;
     grid-template-areas:  "header header"
                           "sidebar main"
                           "sidefooter footer";
-    grid-template-columns: 1fr 65%;
-    grid-template-rows: 30px 1fr;
+    /**grid-template-columns: 1fr 85%;**/
+    grid-template-rows: 100vh 1fr;
     align-items: baseline;
     grid-column-gap: 80px;
     grid-row-gap: 120px;
@@ -61,42 +69,34 @@ body {
 @media screen and (min-width: 1200px) {
   body {
     grid-template-columns: 1fr 70%;
-    grid-template-rows: 10% 1fr;
     grid-column-gap: 100px;
-    grid-row-gap: 40px;
+    grid-row-gap: 0;
     width: 90vw;
   }
 }
 
 .header {
   grid-area: header;
-  border-bottom: 1px solid black;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+  display: grid;
 }
 
 .main-content {
   grid-area: main;
+  background-color: white;
+  padding: 16px
 }
+
 .main-content > *:first-child {
   padding-top: 67px;
 }
 .sidebar {
   grid-area: sidebar;
   align-self: start;
-  border-left: 1px solid black;
-}
-@media screen and (min-width: 980px) {
-  .sidebar {
-    margin-top: 26px;
-    padding-top: 50px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .sidebar {
-    position: fixed;
-    margin-top: 136px;
-    padding-top: 90px;
-    width: 15%;
-  }
+  border-left: none;
+  padding: 0;
 }
 
 .footer {
@@ -127,32 +127,38 @@ body {
   }
 }
 .teaser-row li {
-  padding-right: 32px;
-  display: flex; /* make them all the same height */
+  padding-bottom: 32px;
+  display: flex; /** make them all the same height **/
+  flex-grow: 1;
 }
-
+@media screen and (min-width: 767px) {
+  .teaser-row li {
+    padding-bottom: 0;
+    padding-right: 32px;
+    flex-basis: 0;     
+  }
+}
 
 /** Styles **/
 
 h1 {
-  font-family: 'space_groteskbold';
   font-size: 30px;
   letter-spacing: -0.8px;
 }
 @media screen and (min-width: 767px) {
   h1 {
-    font-size: 50px;
+    font-size: 60px;
   }
 }
 
 h2 {
-  font-family: 'space_groteskbold';
   font-size: 20px;
   border-bottom: 6px solid hotpink;
-  display: inline-block;
+/**  display: inline-block;**/
   /* line-height: 26px; menu headings looked good with the tight underline this made*/
   line-height: normal;
-  padding: 3px;
+  padding: 3px 0;
+  margin: 16px 0;
   /* text-transform: uppercase; Bad A11y */
 }
 @media screen and (min-width: 767px) {
@@ -164,23 +170,15 @@ h2 {
 }
 
 h3 {
-  font-family: 'space_groteskbold';
   color: rgb(225, 0, 110)
 }
 
 p {
-  /* font-family: 'et_book'; */
   font-size: 20px;
 }
 
-a {
-  text-decoration: none;
-  border-bottom: 3px dotted rgb(225, 0, 110);
-  display: inline-block;
-  transition: border-bottom 0.3s, color 0.5s;
-}
-a:hover {
-  border-bottom: 3px solid rgb(0, 132, 122);
+a::focus {
+  color: var(--green);
 }
 
 .label {
@@ -189,7 +187,7 @@ a:hover {
 }
 
 .title {
-  color: rgb(225, 0, 110);
+  color: black;
 }
 
 a.title-link {
@@ -197,11 +195,38 @@ a.title-link {
   line-height: inherit;
 }
 
+.flashbox {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  border-top: 2px solid var(--pink);
+  border-bottom: 2px solid var(--pink); 
+  padding: 15px;
+}
+
+.header--title {
+  font-size: 30px;
+  line-height: 60px;
+  letter-spacing: -0.8px;
+  background-color: white;
+  margin: 0; 
+  display: inline-block;
+  box-shadow: 10px 0 0 white, -10px 0 0 white;
+}
+@media screen and (min-width: 767px) {
+  .header--title {
+    font-size: 60px;
+}
+
+.header--title a {
+  color: var(--pink);
+  border-bottom: 0;
+  
+}
+
 .page-title {
-  font-family: 'space_groteskbold';
   letter-spacing: -0.8px;
   font-size: 40px;
-  line-height: 55px;
   padding: 0;
   margin: 0;
 }
@@ -213,30 +238,25 @@ a.title-link {
 }
 
 .standfirst {
-  font-family: 'space_groteskbold';
   letter-spacing: -0.8px;
-  font-size: 40px;
-  line-height: 55px;
+  font-size: 20px;
+  line-height: 35px;
   margin: 0;
 }
 
 .standfirst a {
-  font-family: 'space_groteskbold';
-  font-size: 40px;
+  font-size: 30px;
   line-height: 0.75em;
   color: rgb(225, 0, 110);
-  border-bottom: 7px dotted rgb(225, 0, 110);
 }
-.standfirst a:hover {
-  border-bottom: 6px solid rgb(0, 132, 122);
-}
+
 @media screen and (min-width: 767px) {
   .standfirst {
-    font-size: 80px;
-    line-height: 95px;
+    font-size: 40px;
+    line-height: 55px;
   }
   .standfirst a {
-      font-size: 80px;
+      font-size: 40px;
   }
 }
 
@@ -246,7 +266,6 @@ blockquote {
 }
 
 .intro p {
-  font-family: 'space_groteskbold';
   font-size: 24px;
   color: rgb(0, 132, 122);
 }
@@ -261,21 +280,16 @@ blockquote {
   color: rgb(225, 0, 110);
   line-height: 0.85;
 }
+
 /*  Page components */
 .button {
   color: rgb(0, 132, 122);
   border-bottom: 0;
-  font-family: 'space_groteskbold';
 }
-.flashbox {
-  font-family: 'space_groteskbold';
-  background-color: rgba(0,132,122,1);
-  padding: 18px;
-  color: white;
-}
+
+
 /* Details */
 .date {
-  font-family: 'space_groteskbold';
   font-style: italic;
   /* color: rgb(0, 132, 122); */
 }
@@ -285,9 +299,7 @@ blockquote {
   padding: 0 0.5em;
 
 }
-.tags {
-  font-family: 'space_groteskbold';
-}
+
 .tags a {
   font-family: 'space_groteskbold';
   border-bottom: 1px solid rgb(225, 0, 110);
@@ -297,6 +309,10 @@ blockquote {
 iframe {
   width: 100%;
   /* Do better */
+}
+
+.related--link {
+  border-bottom: 0;
 }
 
 .article {
@@ -316,16 +332,13 @@ iframe {
   box-shadow: 5px 5px 0px 0px hotpink;
 }
 
-.sidebar > p {
-  padding-left: 32px;
-}
 .sidebar ul {
   list-style: none;
-  padding-left: 32px;
+  padding-left: 16px;
+  padding-bottom: 16px;
 }
 
 .sidebar a {
-  font-family: 'space_groteskbold';
   border-bottom: 1px solid rgb(225, 0, 110);
   color: rgb(225, 0, 110);
 }
@@ -336,6 +349,7 @@ iframe {
 
 footer a {
   border-bottom: 1px solid rgb(225, 0, 110);
+  background-color: white;
   color: rgb(225, 0, 110);
 }
 

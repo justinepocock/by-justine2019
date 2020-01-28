@@ -403,6 +403,7 @@ iframe {
   color: rgb(225, 0, 110);
   background-color: white;
   font-family: 'space_groteskregular';
+  line-height: 2em;
 }
 
 .sidebar a:hover {

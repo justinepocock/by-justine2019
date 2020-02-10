@@ -49,7 +49,7 @@ body {
   background: rgba(255,255,255,1);
 }
 
-@media screen and (min-width: 980px) and (-webkit-min-device-pixel-ratio: 1){
+@media screen and (min-width: 980px) and (-webkit-min-device-pixel-ratio: 2){
   body {
     display: grid;
     grid-template-areas:  "header header"

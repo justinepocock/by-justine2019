@@ -108,6 +108,20 @@ body {
   justify-content: space-between;
 }
 
+.section-description p {
+  font-size: 14px;
+  font-family: 'space_groteskregular';
+  margin-bottom: 2rem;
+}
+.section-description a  {
+  font-size: 14px;
+  font-family: 'space_groteskregular';
+  color: var(--pink);
+}
+.section-description a:hover  {
+  color: var(--green);
+}
+
 .teaser-row {
   margin-top: 80px;
   margin-bottom: 40px;

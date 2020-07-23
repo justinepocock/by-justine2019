@@ -1,0 +1,56 @@
+
+:root {
+  --pink: rgb(225, 0, 110);
+  --green: rgb(0, 132, 122);
+}
+
+* {
+  /**font-family: 'space_groteskregular';**/
+  font-family: 'Work Sans', sans-serif;
+  font-size: 35px;
+}
+
+.pink {
+  color: var(--pink);
+}
+
+.green {
+  color: var(--green);
+}
+
+/** Layout **/
+body {
+  margin: 0 auto;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.header {
+  background-color: hotpink;
+  margin: 0 -9999px;
+  padding: 100px 9999px;
+  text-align: center;
+}
+
+
+h1 {
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 70px;
+}
+
+button {
+  background-color: white;
+  border: 0;
+  padding: 0.5rem;
+  
+}
+
+.help { 
+  background-color: #bada55;
+  margin: 0 -9999px;
+  padding: 100px 9999px;
+}
+

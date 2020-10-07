@@ -100,8 +100,8 @@ body {
   align-self: start;
   border-left: none;
   padding: 0;
-  background-image: url('./assets/background.svg');
-  background-size: 550px;
+  /* background-image: url('./assets/background.svg'); */
+  /* background-size: 550px; */
 }
 
 .footer {
@@ -305,13 +305,13 @@ a.title-link {
 
 blockquote {
   font-size: 30px;
-  color: rgb(0, 132, 122);
+  color: var(--pink);
   font-family: 'space_groteskregular';
 }
 
 .intro p {
   font-size: 24px;
-  color: rgb(0, 132, 122);
+  color: var(--pink);
   font-family: 'space_groteskregular';
 }
 
